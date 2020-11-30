@@ -17,7 +17,7 @@ const kebabify = (str: string): string =>
     .replace(/[^a-zA-Z]+/g, `-`)
     .toLowerCase()
 
-const packageManager = (npmConfigUserAgent?: string): PackageManager => {
+export const packageManager = (npmConfigUserAgent?: string): PackageManager => {
   const configStore = getConfigStore()
   const actualPackageManager = configStore.get(packageManagerConfigKey)
 
